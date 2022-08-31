@@ -447,7 +447,7 @@ namespace Facebook.Unity.Mobile.IOS
             this.iosWrapper.UploadImageToMediaLibrary(
                 System.Convert.ToInt32(CallbackManager.AddFacebookDelegate(callback)),
                 caption,
-                imageUri.AbsolutePath.ToString(),
+                imageUri.LocalPath,
                 shouldLaunchMediaDialog);
         }
 
@@ -460,7 +460,7 @@ namespace Facebook.Unity.Mobile.IOS
             this.iosWrapper.UploadVideoToMediaLibrary(
                 System.Convert.ToInt32(CallbackManager.AddFacebookDelegate(callback)),
                 caption,
-                videoUri.AbsolutePath.ToString());
+                videoUri.LocalPath);
         }
 
         public override void GetUserLocale(FacebookDelegate<ILocaleResult> callback)
